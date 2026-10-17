@@ -1,0 +1,3 @@
+import {defineConfig,devices} from "@playwright/test";
+process.env.PLAYWRIGHT_BROWSERS_PATH ||= new URL("./.sites-runtime/browsers",import.meta.url).pathname;
+export default defineConfig({testDir:"./tests/e2e",fullyParallel:false,workers:1,timeout:90000,expect:{timeout:15000},reporter:[["list"],["html",{open:"never"}]],use:{baseURL:"http://127.0.0.1:5173",trace:"retain-on-failure",screenshot:"only-on-failure"},projects:[{name:"chromium",use:{...devices["Desktop Chrome"]}}],webServer:{command:"node scripts/prepare-e2e.mjs && npm run dev -- --host 127.0.0.1",url:"http://127.0.0.1:5173/api/health",reuseExistingServer:!process.env.CI,timeout:120000}});

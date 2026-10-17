@@ -1,0 +1,20 @@
+version: 1
+project:
+  name: company-platform
+layers:
+  - name: domain
+    match: [lib/contracts.ts]
+  - name: persistence
+    match: [db/**/*.ts]
+  - name: server
+    match: [lib/server/**/*.ts]
+  - name: api
+    match: [app/api/**/*.ts]
+  - name: ui
+    match: [components/data-room/**/*.tsx]
+ruleset:
+  domain: { mayDependOn: [] }
+  persistence: { mayDependOn: [] }
+  server: { mayDependOn: [domain, persistence] }
+  api: { mayDependOn: [domain, server] }
+  ui: { mayDependOn: [domain, ui] }

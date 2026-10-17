@@ -1,0 +1,1 @@
+ALTER TABLE `shares` ADD `never_expires` integer DEFAULT 0 NOT NULL;

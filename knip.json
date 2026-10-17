@@ -1,0 +1,31 @@
+{
+  "entry": [
+    "app/**/{page,layout,route}.tsx",
+    "app/**/route.ts",
+    "build/sites-worker.ts",
+    "tests/**/*.ts",
+    "lib/server/**/*.ts",
+    "components/ui/**/*.tsx"
+  ],
+  "project": [
+    "app/**/*.{ts,tsx}",
+    "components/**/*.{ts,tsx}",
+    "lib/**/*.ts",
+    "db/**/*.ts"
+  ],
+  "ignoreDependencies": [
+    "cloudflare",
+    "json-rpc-2.0",
+    "raw-body",
+    "tailwindcss",
+    "tw-animate-css",
+    "@hookform/resolvers"
+  ],
+  "ignore": [
+    "app/chatgpt-auth.ts",
+    "lib/connectors.ts",
+    "lib/connector-context.ts",
+    "components/connector-error.tsx"
+  ],
+  "ignoreExportsUsedInFile": true
+}

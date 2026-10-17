@@ -1,0 +1,43 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.5.2/schema.json",
+  "files": {
+    "includes": [
+      "app/**",
+      "components/data-room/**",
+      "lib/**",
+      "tests/**",
+      "db/schema.ts"
+    ]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 100
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "a11y": {
+        "useSemanticElements": "off"
+      },
+      "complexity": {
+        "noExcessiveCognitiveComplexity": "off",
+        "noImportantStyles": "off"
+      },
+      "style": {
+        "noNonNullAssertion": "off",
+        "noDescendingSpecificity": "off"
+      },
+      "performance": {
+        "noImgElement": "off"
+      }
+    }
+  },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
+    }
+  }
+}
