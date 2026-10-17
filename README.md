@@ -42,6 +42,7 @@ Call `POST /api/bootstrap` once with `Authorization: Bearer <BOOTSTRAP_SECRET>`.
 ## Configure the template
 
 1. Read [CUSTOMIZE_WITH_AI.md](CUSTOMIZE_WITH_AI.md).
+   For the Fly healthy energy-drink project, use [FLY_AI_BUILD_PROMPT.md](FLY_AI_BUILD_PROMPT.md).
 2. Replace the sample brand assets in `public/brand/`.
 3. Update company language, navigation and URLs in `components/data-room/workspace.tsx`.
 4. Set the deployment secrets listed in `.dev.vars.example`.
